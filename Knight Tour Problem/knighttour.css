@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 1px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 1px solid #ddd;
+}
+
+.cell:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.cell:nth-child(even) {
+    background-color: #ddd;
+}
+
+.cell.visited {
+    background-color: #cfc;
+}

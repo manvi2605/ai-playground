@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Graph with Best-First Search and Weights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #infoContainer {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .infoBox {
+            width: 40%;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .infoBox h3 {
+            margin-top: 0;
+        }
+        .node-input {
+            margin-bottom: 10px;
+        }
+        .node-input input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Graph with Best-First Search and Weights</h1>
+    <canvas id="graphCanvas" width="800" height="600"></canvas>
+    <button id="bestFirstButton">Start Best-First Search</button>
+    <button id="assignHeuristicButton">Assign Heuristic Values</button>
+
+    <div id="infoContainer">
+        <div class="infoBox">
+            <h3>Traversal Order</h3>
+            <ul id="traversalOrder"></ul>
+        </div>
+        <div class="infoBox">
+            <h3>Heuristic Values</h3>
+            <div id="heuristicInputContainer"></div>
+            <div>
+                <label for="startNodeInput">Start Node: </label>
+                <input type="text" id="startNodeInput" placeholder="Enter Start Node (e.g., A)">
+            </div>
+            <div>
+                <label for="goalNodeInput">Goal Node: </label>
+                <input type="text" id="goalNodeInput" placeholder="Enter Goal Node (e.g., G)">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="bestfirstsearch.js"></script>
+
+</body>
+</html>
